@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!--FAVICON -->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+
+<link rel="stylesheet" href="stylesheets/estilo_gral.css" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+<script src="javascripts/angular.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+<script src="javascripts/angularApp.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script><!-- java google universal-->
+
+
+<script type="text/javascript">
+function mainmenu(){
+  $(" #nave ul ").css({display: "none"});
+  $(" #nave li").hover(function(){
+    $(this).find('ul:first:hidden').css({visibility: "visible",display: "none"}).slideDown(400);
+  },function(){
+    $(this).find('ul:first').slideUp(400);
+  });
+}
+$(document).ready(function(){
+  mainmenu();
+});
+</script>
+
+<script type="text/javascript" src="javascripts/bootstrap.js"></script>
+
+<link rel="stylesheet" href="stylesheets/desplegable.css" type="text/css" media="screen" />
+
+
+</head>
+
+<body ng-app="axel">
+
+    <div id="wrapper" ng-controller="navCtrl" ng-show="user.navegador">
+      <header>
+
+          <div id="logo"><a href="#/home"><img src="images/logo.png" alt="capitalizaRH" width="205" height="61" title="capitalizaRH"/></a></div>
+
+          <div id="navegador">
+          <ul id="nave">
+              <li><a href="#/cursos/Todos" s>CURSOS</a> &nbsp; | &nbsp;
+                  <ul class="submenu">
+                      <li><a href="#/cursos/Categoria">CURSOS POR CATEGORÍA</a></li>
+                      <li><a href="#/cursos/Online - E-learning">ONLINE / E-LEARNING</a></li>
+                      <li><a href="#/cursos/Carreras de Grado">CARRERAS DE GRADO</a></li>
+                      <li><a href="#/cursos/Postgrados - Maestrias">POSGRADOS / MAESTRÍAS</a></li>
+                      <li><a href="#/cursos/Todos">TODOS LOS CURSOS</a></li>
+                  </ul>
+              </li>
+
+              <li><a href="#/instituciones/Todos">INSTITUCIONES ACAD&Eacute;MICAS</a>&nbsp; | &nbsp;</li>
+              <li><a href="#/servicios/Todos" >+MAS</a>&nbsp; | &nbsp;</li>
+              <li><a href="#/contacto" title="contacto">CONTACTANOS</a></li>
+          </ul>
+          </div>
+      </header>
+    </div>
+
+    <div ui-view autoscroll="true"></div>
+
+    <script type="text/ng-template" id="login.html">
+
+    </script>
+    <script type='text/javascript'>
+    (function() {
+      // code goes here...
+      (function () {
+        var ua = navigator.userAgent,
+        isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+
+        if (isMobileWebkit) {
+          $('html').addClass('mobile');
+        }
+
+        $(function () {
+          var iScrollInstance;
+
+          if (isMobileWebkit) {
+            iScrollInstance = new iScroll('wrapper');
+
+            $('#scroller').stellar({
+              scrollProperty: 'transform',
+              positionProperty: 'transform',
+              horizontalScrolling: false,
+              verticalOffset: 150
+            });
+          } else {
+            $.stellar({
+              horizontalScrolling: false,
+              verticalOffset: 150
+            });
+          }
+        });
+      })
+    })
+
+    </script>
+
+
+
+</body>
+
+</html>

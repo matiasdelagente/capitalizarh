@@ -1,0 +1,43 @@
+
+<div id="wrapper">
+
+
+
+<section>
+  <h6> Cursos </h6>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+    <div id="modulo" ng-repeat="post in posts | filter: filtro " >
+        <div id="modulo-img"><a href="#/curso/{{post._id}}"><img ng-src="{{post.foto}}" alt="photoshop" width="375" height="318" class="brightness"/></a></div>
+        <div ng-show="{{post.ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+        <div id="modulo-title">
+        <h4><a href="#/curso/{{post._id}}">{{post.titulo}}</a></h4>
+        <h5>{{post.inicio | date:"dd/MM/yyyy"}} </h5>
+        </div>
+    </div>
+</section>
+<section>
+    <h6> Instituciones </h6>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+      <div id="modulo" ng-repeat="institucion in instituciones | filter: filtro ">
+          <div id="modulo-img"><img ng-src="{{institucion.logo}}" alt="photoshop" width="375" height="318" class="brightness"/></div>
+          <div ng-show="{{institucion.ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+          <div id="modulo-title">
+          <h4>{{institucion.nombre}}</h4>
+          <h5>{{institucion.tipo}} </h5>
+          </div>
+      </div>
+</section>
+
+<footer>
+  <div id="footer-logos">
+    <ul>
+      <li><a href="#/home"><img src="images/logo.png" height="44" alt="capitalizaRH" title="capitalizaRH"></a></li>
+    </ul>
+  </div>
+  <div id="footer-nav">COPYRIGHT &copy; 2014 CAPITALIZARH  |  <a href="mailto:CONECTARME@capitalizarh.com" title="CONECTARME@capitalizarh.com" target="_blank">CONECTARME@CAPITALIZARH.COM</a></div>
+</footer>
+
+
+</div>

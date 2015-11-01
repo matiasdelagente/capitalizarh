@@ -1,0 +1,86 @@
+
+<!--STYLES CSS -->
+
+<div id="slider"><img ng-src="{{post.foto}}" width="100%" height="auto" alt=""/>  </div>
+
+</div>
+<div id="wrapper">
+
+<section>
+    <div id="info">
+        <div id="info-curso" ng-show="{{post.inicio}}">
+            <p><span class="info-destacado">Inicio</span>&emsp;&emsp;{{post.inicio | date:"dd/MM/yyyy"}}</p>
+        </div>
+        <div id="info-curso" ng-show="{{post.horainicio}}">
+            <p ><span class="info-destacado">Horario</span>&emsp;&emsp;{{post.horainicio}}  a  {{post.horafin}} hs.</p>
+        </div>
+
+        <div id="info-curso" ng-show="{{post.duracion}}">
+            <p><span class="info-destacado">Duracion</span>&emsp;{{post.duracion}}</p>
+        </div>
+
+        <div id="info-valor" ng-show="{{post.valor}}">
+            <p><span class="info-destacado2">Valor</span>&emsp;&emsp;$ {{post.valor}} </p>
+        </div>
+        <div id="info-lugar" ng-show="{{post.institucion}}">
+            <p>{{post.institucion.nombre}}<br>
+                <span class="info-destacado2">{{post.institucion.calle}} {{post.institucion.numero}}, {{post.institucion.departamento}}</span></p>
+        </div>
+
+        <div id="info-lugar" ng-show="{{post.mapa}}">
+          <p ng-bind-html="renderHtml(post.mapa)"></p>
+        </div>
+  </div>
+  <div id="curso">
+     <h8>{{post.tipo}}</h8>
+     <h7> {{post.titulo}}</h7>
+     <p class="curso-destacado">{{post.epigrafe}}</p>
+     <p>&nbsp;</p>
+     <p>{{post.descripcion}}</p>
+     <div id="info-inscribite">Inscribite  &raquo;</div>
+     <p>&nbsp;</p>
+  </div>
+  <div id="links">
+    <ul>
+      <li><a href="http://{{post.facebook}}" target="http://{{post.facebook}}"><img src="images/fb.png" width="87" height="83" alt="Facebook"/></a></li>
+      <li><a href="http://{{post.twiter}}" target="http://{{post.twiter}}"><img src="images/tw2.png" width="86" height="83" alt="twitter"/></a></li>
+      <li><a href="http://{{post.linkedin}}" target="http://{{post.linkedin}}"><img src="images/linked-in.png" width="86" height="83" alt="Linked in"/></a></li>
+    </ul>
+  </div>
+</section>
+<div id="linea"></div>
+<section>
+
+<div id="interesar"> <span class="spot"><a href="#">+</a></span> Tambi&eacute;n te pueden interesar estos cursos </div>
+
+
+
+<div id="modulo3" ng-repeat="post in posts" ng-if="$index > ultimo-4">
+  <div id="modulo-img"><a href="#/curso/{{post._id}}"><img ng-src="{{post.foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+  <div ng-show="{{post.ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+<div id="modulo-title">
+<h4><a href="#/curso/{{post._id}}">{{post.titulo}}</a></h4>
+    <h5>{{post.inicio | date:"dd/MM/yyyy"}}</h5>
+</div>
+</div>
+
+
+</section>
+
+  <div id="cursos">
+    <div id="cursos-int"><a href="#/cursos/Todos">M&aacute;s cursos</a></div>
+  </div>
+
+  <div id="linea"></div>
+
+
+<footer>
+  <div id="footer-logos">
+    <ul>
+        <li><a href="#/home"><img src="images/logo.png" height="44" alt="capitalizaRH" title="capitalizaRH"></a></li>
+    </ul>
+  </div>
+  <div id="footer-nav">COPYRIGHT &copy; 2014 CAPITALIZARH  |  <a href="mailto:CONECTARME@capitalizarh.com" title="CONECTARME@capitalizarh.com" target="_blank">CONECTARME@CAPITALIZARH.COM</a></div>
+</footer>
+
+</div>

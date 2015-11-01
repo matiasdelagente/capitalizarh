@@ -1,0 +1,61 @@
+<!-- BOOTSTRAP-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<div class="col-md-10 col-md-offset-1">
+
+  <div>
+    <nav class="navbar navbar-default navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Capitalizarh</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav navbar-right" align="center">
+          <li><a href="#/admin/banner"><span class="glyphicon glyphicon-list"></span> Listar banner </a></li>
+          <li><a href="#/admin/servicio"><span class="glyphicon glyphicon-list"></span> Listar Servicios </a></li>
+          <li><a href="#/create/servicio"><span class="glyphicon glyphicon-list"></span> Crear Servicios </a></li>
+          <li><a href="#/admin/institucion"><span class="glyphicon glyphicon-list"></span> Listar Instituciones </a></li>
+          <li><a href="#/create/institucion"><span class="glyphicon glyphicon-list"></span> Crear Instituciones </a></li>
+          <li><a href="#/admin"><span class="glyphicon glyphicon-list"></span> Listar Eventos </a></li>
+          <li><a href="#/create"><span class="glyphicon glyphicon-list"></span> Crear Evento </a></li>
+          <li><a href="#/login"><span class="glyphicon glyphicon-list"></span> Salir </a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="col-md-4 col-md-offset-4">
+
+    <form role="form" ng-submit="editBanner(banner)">
+
+      <div class="form-input">
+        Nombre del banner
+        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" ng-model="banner.nombre">
+      </div>
+      <br>
+      <div class="form-input">
+        Numero del banner
+        <input type="text" class="form-control" id="inputNumero" placeholder="Numero" ng-model="banner.numero">
+      </div>
+      <br>
+      <div class="form-input">
+        Seleccione el banner
+        <input type="file" name="file" id="file" sube-archivo="banner.imagen" style="border:2px solid #F0FFFF;border-radius:20px;box-shadow:2px 2px #808080, -2px -2px #D3D3D3;color:#3A87AD;" />
+        <ul>
+          <li class="span4">
+            <div class="thumbnail" style="display:table;height:75px;margin-top:5px;">
+              <img ng-src="{{banner.imagen}}" alt="" style="height:75px;border:1px solid #000;display: block;"/>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-input col-md-offset-4">
+        <button type="submit" class="btn btn-primary">Editar banner</button>
+      </div>
+
+    </form>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<!--IPHONE META TAG FOR VIEWPORT, MAINTAINING SCALE ON ORIENTATION CHANGE-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<!-- Si quieres que Google utilice la informaci�n de tu p�gina HTML-->
+<meta name="robots" content="NOODP"/>
+
+<title>CAPITALIZARH</title>
+
+<meta content="Nombre del Autor" name="author" />
+<meta content="Descripcion de la pagina" name="description" />
+<meta content="etiqueta1, etiqueta2, etiqueta3" name="keywords" />
+
+    <!--STYLES CSS -->
+    <link rel="stylesheet" href="stylesheets/estilo_gral.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="stylesheets/desplegable.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="stylesheets/hover.css" type="text/css" media="screen" />
+
+    <!--FAVICON -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- GOOGLE-FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!--JAVA BASE -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script><!-- java google universal-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="javascripts/angularApp.js"></script>
+
+    <!-- Script para ahorrarse los vendor prefix en CSS
+    <script src="/javascripts/prefixfree.min.js"></script>-->
+
+    <!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+    <link rel="stylesheet" type="text/css" href="javascripts/engine1/style.css" />
+    <script type="text/javascript" src="javascripts/engine1/jquery.js"></script>
+
+    <!-- End WOWSlider.com HEAD section -->
+
+
+</head>
+
+<body ng-app="axel">
+
+    <div id="wrapper" ng-controller="navCtrl" ng-show="user.navegador">
+        <header>
+            <div id="logo"><a href="#"><img src="images/logo.png" alt="ReCursos" width="205" height="61" title="ReCursos"/></a></div>
+
+
+            <div id="navegador">
+                <ul id="nave">
+                    <li><a href="A" s>CURSOS</a> &nbsp; | &nbsp;
+                        <ul class="submenu">
+                            <li><a href="#">Administraci&oacute;n</a></li>
+                            <li><a href="#">M&uacute;sica</a></li>
+                            <li><a href="#">Ceremonial</a></li>
+                            <li><a href="#">Computaci&oacute;n</a></li>
+                            <li><a href="#">Comercio</a></li>
+                            <li><a href="#">Comunicaci&oacute;n</a></li>
+                            <li><a href="#">Gastronom&iacute;a</a></li>
+                            <li><a href="#">Legales</a></li>
+                            <li><a href="#">Idiomas</a></li>
+                            <li><a href="#">Arte</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#/instituciones">INSTITUCIONES ACAD&Eacute;MICAS</a>&nbsp; | &nbsp;</li>
+                    <li><a href="#/salas" >+MAS</a>&nbsp; | &nbsp;</li>
+                    <li><a href="#/contacto" title="contacto">CONTACTANOS</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <ui-view></ui-view>
+
+    <script type="text/ng-template" id="home1.html">
+
+        <div id="slider">
+
+            <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+            <div id="wowslider-container1">
+                <div class="ws_images"><ul>
+                        <li><a href=" "><img ng-src="{{posts[0].foto}}" alt="full screen slider" title="" id="wows1_0" width="100%"/></a>
+                            <div id="slider-content">
+                                <div id="slider-info">
+                                    <h1>posts[0].titulo</h1>
+                                    <h2>posts[0].calle</h2>
+                                    <h3>posts[0].inicio</h3>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li><a href=" "><img ng-src="{{posts[1].foto}}" alt="full screen slider" title="" id="wows1_1" width="100%"/></a>
+                            <div id="slider-content">
+                                <div id="slider-info">
+                                    <h1>posts[1].titulo</h1>
+                                    <h2>posts[1].calle</h2>
+                                    <h3>posts[1].inicio</h3>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href=" "><img ng-src="{{posts[2].foto}}" alt="full screen slider" title="" id="wows1_2" width="100%"/></a>
+                            <div id="slider-content">
+                                <div id="slider-info">
+                                    <h1>posts[2].titulo</h1>
+                                    <h2>posts[2].calle</h2>
+                                    <h3>posts[2].inicio</h3>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+                <div class="ws_bullets"><div>
+                        <a href="#" title="banner 1">1</a>
+                        <a href="#" title="banner 2">2</a>
+                        <a href="#" title="banner 3">3</a>
+
+                    </div></div><span class="wsl"></span>
+                <div class="ws_shadow"></div>
+            </div>
+
+    <!-- End WOWSlider.com BODY section -->
+
+    <!--<img src="images/banner1.jpg" width="100%" height="auto" alt=""/>
+      <div id="slider-content">
+        <div id="slider-info">
+          <h1>Introducci&oacute;n a la gesti&oacute;n gastron&oacute;mica</h1>
+      <h2>Universidad Nacional de Cuyo</h2>
+      <h3>Martes 9 de Septiembre</h3>
+    </div>
+  </div>-->
+
+    </div>
+
+    <div id="wrapper">
+    <div id="sub-botonera">
+        <ul>
+            <li class="spot"><a href="#">Qu&eacute; quer&eacute;s estudiar?</a></li>
+            <li><a href="#">Administraci&oacute;n</a></li>
+            <li><a href="#">M&uacute;sica</a></li>
+            <li><a href="#">Ceremonial</a></li>
+            <li><a href="#">Computaci&oacute;n</a></li>
+            <li><a href="#">Comercio</a></li>
+            <li><a href="#">Comunicaci&oacute;n</a></li>
+            <li><a href="#">Gastronom&iacute;a</a></li>
+            <li><a href="#">Legales</a></li>
+            <li><a href="#">Idiomas</a></li>
+            <li><a href="#">Arte</a></li>
+        </ul>
+    </div>
+    <div id="linea"></div>
+    <div id="buscador"><form><input type="text" id="buscar" width="80%" placeholder="Buscar"></form>
+        <div id="lupa"><a href="#"><img src="images/lupa.png" width="27" height="27" alt="Buscar"/></a></div></div>
+    <div id="evento">
+        <div id="fijo">
+            <div id="modulo-eventos">
+                <h6> PR&Oacute;XIMOS CURSOS</h6>
+                <p>&nbsp;</p>
+                <div id="modulo-eventos-individual">
+                    <p><a href="#">Curso de Wedding Planner, Sede La Plata</a></p>
+                    <p> Martes 9 de Septiembre</p>
+                </div>
+                <div id="modulo-eventos-individual">
+                    <p> <a href="#">Curso de Redacci&oacute;n Acad&eacute;mica</a></p>
+                    <p> Martes 9 de Septiembre</p></div>
+
+                <div id="modulo-eventos-individual">
+                    <p> <a href="#">Curso de Marketing Pol&iacute;tico</a></p>
+                    <p> Martes 9 de Septiembre</p></div>
+
+                <div id="modulo-eventos-individual">
+                    <p> <a href="#">Seminario de Ceremonial y Protocolo</a></p>
+                    <p> Martes 9 de Septiembre</p></div>
+
+            </div>
+        </div>
+    </div>
+    <section>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[3].foto.toString() != '[object Object]' && posts[3].foto.toString() != ''">
+                <a href="#/curso/{{posts[3]._id}}">
+                    <img ng-src="{{posts[3].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[3].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[3]._id}}">{{posts[3].titulo}}</a></h4>
+                <h5>{{posts[3].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[4].foto.toString() != '[object Object]' && posts[4].foto.toString() != ''">
+                <a href="#/curso/{{posts[4]._id}}">
+                    <img ng-src="{{posts[4].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[4].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[4]._id}}">{{posts[4].titulo}}</a></h4>
+                <h5>{{posts[4].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[5].foto.toString() != '[object Object]' && posts[5].foto.toString() != ''">
+                <a href="#/curso/{{posts[5]._id}}">
+                    <img ng-src="{{posts[5].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[5].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[5]._id}}">{{posts[5].titulo}}</a></h4>
+                <h5>{{posts[5].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[6].foto.toString() != '[object Object]' && posts[6].foto.toString() != ''">
+                <a href="#/curso/{{posts[6]._id}}">
+                    <img ng-src="{{posts[6].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[6].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[6]._id}}">{{posts[6].titulo}}</a></h4>
+                <h5>{{posts[6].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[7].foto.toString() != '[object Object]' && posts[7].foto.toString() != ''">
+                <a href="#/curso/{{posts[7]._id}}">
+                    <img ng-src="{{posts[7].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[7].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[7]._id}}">{{posts[7].titulo}}</a></h4>
+                <h5>{{posts[7].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[8].foto.toString() != '[object Object]' && posts[8].foto.toString() != ''">
+                <a href="#/curso/{{posts[8]._id}}">
+                    <img ng-src="{{posts[8].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[8].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[8]._id}}">{{posts[8].titulo}}</a></h4>
+                <h5>{{posts[8].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[9].foto.toString() != '[object Object]' && posts[9].foto.toString() != ''">
+                <a href="#/curso/{{posts[9]._id}}">
+                    <img ng-src="{{posts[9].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[9].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[9]._id}}">{{posts[9].titulo}}</a></h4>
+                <h5>{{posts[9].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[10].foto.toString() != '[object Object]' && posts[10].foto.toString() != ''">
+                <a href="#/curso/{{posts[10]._id}}">
+                    <img ng-src="{{posts[10].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[10].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[10]._id}}">{{posts[10].titulo}}</a></h4>
+                <h5>{{posts[10].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+    </section>
+    <div id="linea"></div>
+
+    <div id="newsletter">
+        <h6> Suscribite a nuestro newsletter </h6>
+        <p>Mantenete informado de las novedades y cursos de CapitalizaRH </p>
+        <p>&nbsp;</p>
+        <form method="post" id="suscripcion">
+            <select name="intereses" class="selectstyle" id="intereses" placeholder="Que te interesa?" >
+                <option value="1">Administracion</option>
+                <option value="2">Musica</option>
+                <option value="3">Ceremonial</option>
+                <option value="4">Computacion</option>
+            </select>
+            <input type="email" id="correo" placeholder="nombre@tumail.com" class="blanco">
+            <input type="button" id="enviar">
+        </form>
+
+    </div>
+    <div id="publicidad">ESPACIO PUBLICITARIO</div>
+
+    <section>
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[8].foto.toString() != '[object Object]' && posts[8].foto.toString() != ''">
+                <a href="#/curso/{{posts[8]._id}}">
+                    <img ng-src="{{posts[8].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[8].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[8]._id}}">{{posts[8].titulo}}</a></h4>
+                <h5>{{posts[8].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[9].foto.toString() != '[object Object]' && posts[9].foto.toString() != ''">
+                <a href="#/curso/{{posts[9]._id}}">
+                    <img ng-src="{{posts[9].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[9].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[9]._id}}">{{posts[9].titulo}}</a></h4>
+                <h5>{{posts[9].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[10].foto.toString() != '[object Object]' && posts[10].foto.toString() != ''">
+                <a href="#/curso/{{posts[10]._id}}">
+                    <img ng-src="{{posts[10].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[10].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[10]._id}}">{{posts[10].titulo}}</a></h4>
+                <h5>{{posts[10].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[11].foto.toString() != '[object Object]' && posts[11].foto.toString() != ''">
+                <a href="#/curso/{{posts[11]._id}}">
+                    <img ng-src="{{posts[11].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[11].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[11]._id}}">{{posts[11].titulo}}</a></h4>
+                <h5>{{posts[11].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[12].foto.toString() != '[object Object]' && posts[12].foto.toString() != ''">
+                <a href="#/curso/{{posts[12]._id}}">
+                    <img ng-src="{{posts[12].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[12].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[12]._id}}">{{posts[12].titulo}}</a></h4>
+                <h5>{{posts[12].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[13].foto.toString() != '[object Object]' && posts[13].foto.toString() != ''">
+                <a href="#/curso/{{posts[13]._id}}">
+                    <img ng-src="{{posts[13].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[13].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[13]._id}}">{{posts[13].titulo}}</a></h4>
+                <h5>{{posts[13].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="twitter"> <img src="images/twitter.png" width="100%" alt=""/></div>
+
+
+    <section>
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[13].foto.toString() != '[object Object]' && posts[13].foto.toString() != ''">
+                <a href="#/curso/{{posts[13]._id}}">
+                    <img ng-src="{{posts[13].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[13].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[13]._id}}">{{posts[13].titulo}}</a></h4>
+                <h5>{{posts[13].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[13].foto.toString() != '[object Object]' && posts[13].foto.toString() != ''">
+                <a href="#/curso/{{posts[13]._id}}">
+                    <img ng-src="{{posts[13].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[13].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[13]._id}}">{{posts[13].titulo}}</a></h4>
+                <h5>{{posts[13].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+        <div id="modulo">
+            <div id="modulo-img" data-ng-show="posts[13].foto.toString() != '[object Object]' && posts[13].foto.toString() != ''">
+                <a href="#/curso/{{posts[13]._id}}">
+                    <img ng-src="{{posts[13].foto}}" alt="photoshop" width="376" height="319" class="brightness"/>
+                </a>
+            </div>
+            <div ng-show="{{posts[13].ultimos_cupos}}"><div id="destacados">&Uacute;LTIMOS CUPOS</div></div>
+            <div id="modulo-title">
+                <h4><a href="#/curso/{{posts[13]._id}}">{{posts[13].titulo}}</a></h4>
+                <h5>{{posts[13].inicio | date:"dd/MM/yyyy"}}</h5>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div id="cursos">
+        <div id="cursos-int"><a href="#">Ver todos los cursos</a></div>
+    </div>
+
+    <div id="sociales">
+        <div id="sociales-int"><img src="images/somos-sociales-fb.png" alt="redes sociales
+" width="744" height="46" usemap="#Map"/>
+            <map name="Map">
+                <area shape="rect" coords="541,2,598,41" href="#" target="_blank" alt="Facebook
+">
+                <area shape="rect" coords="606,-4,657,40" href="#" target="_blank" alt="twitter">
+                <area shape="rect" coords="666,-1,717,44" href="#" target="_blank" alt="linked in">
+            </map>
+        </div>
+    </div>
+    <div id="linea"></div>
+
+
+    <footer>
+        <div id="footer-logos">
+            <ul>
+                <li><a href="#"><img src="images/logo-capitalizar.png" width="187" height="44" alt="capitalizarh
+"/></a></li>
+                <li><a href="#"><img src="images/logo.png" height="44" alt="recursos
+"/></a></li>
+            </ul>
+        </div>
+        <div id="footer-nav">COPYRIGHT &copy; 2014 CAPITALIZARH  |  <a href="mailto:hola@capitalizarh.com" title="hola@capitalizarh.com" target="_blank">HOLA@CAPITALIZARH.COM</a></div>
+    </footer>
+
+    </div>
+    </script>
+
+    <script type="text/ng-template" id="create.html">
+
+        <!-- BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <div class="col-md-10 col-md-offset-1">
+
+            <div>
+                <nav class="navbar navbar-default navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Capitalizarh</a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav navbar-right" align="center">
+                            <li><a href="#/admin/institucion"><span class="glyphicon glyphicon-list"></span> Listar Instituciones </a></li>
+                            <li><a href="#/admin"><span class="glyphicon glyphicon-list"></span> Listar Eventos </a></li>
+                            <li><a href="#/login"><span class="glyphicon glyphicon-list"></span> Salir </a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="col-md-4 col-md-offset-4">
+
+                <form role="form" ng-submit="createPost()">
+
+                    <div class="form-input">
+                        Tipo
+                        <input type="number" class="form-control" id="inputTipo" placeholder="Tipo" ng-model="post.tipo">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Titulo
+                        <input type="text" class="form-control" id="inputTitulo" placeholder="Titulo" ng-model="post.titulo">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Epigrafe
+                        <input type="text" class="form-control" id="inputEpigrafe" placeholder="Epigrafe" ng-model="post.epigrafe">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Descripcion
+                        <textarea class="form-control" id="inputDescripcion" rows="4" placeholder="Descripcion" ng-model="post.descripcion"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Inicio
+                        <input type="date" class="form-control" id="inputInicio"  min="2014-10-01" max="2015-12-31" ng-model="post.inicio">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Duracion
+                        <input type="text" class="form-control" id="inputDuracion" placeholder="Duracion" ng-model="post.duracion">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Hora Inicio
+                        <input type="text" class="form-control" id="horainicio" placeholder="Hora Inicio" ng-model="post.horainicio">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Hora Fin
+                        <input type="text" class="form-control" id="horafin" placeholder="Hora Fin" ng-model="post.horafin">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Valor
+                        <input type="number" class="form-control" id="valor" ng-model="post.valor">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Calle
+                        <input type="text" class="form-control" id="calle" ng-model="post.calle">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Numero
+                        <input type="number" class="form-control" id="numero" ng-model="post.numero">
+                    </div>
+                    <br>
+                    <div class="form-input">
+                        Departamento
+                        <select id="sel" class="form-control" ng-model="post.departamento"
+                                ng-options="departamento.nombre as departamento.nombre for departamento in departamentos.data">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        Seleccione una Imagen
+                        <input type="file" name="file" id="file" sube-archivo="post.foto" style="border:2px solid #F0FFFF;border-radius:20px;box-shadow:2px 2px #808080, -2px -2px #D3D3D3;color:#3A87AD;" />
+                        <ul class="thumbnails" data-ng-show="post.foto.toString() != '[object Object]' && post.foto.toString() != ''" data-ng-cloak>
+                            <li class="span4">
+                                <div class="thumbnail" style="display:table;height:75px;margin-top:5px;">
+                                    <img ng-src="{{post.foto}}" alt="" style="height:75px;border:1px solid #000;display: block;"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="form-input">
+                        Ultimos Cupos
+                        <input type="checkbox" class="form-control" id="ultimos_cupos" ng-model="post.ultimos_cupos">
+                    </div>
+                    <br>
+                    <div class="form-input col-md-offset-5">
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="login.html">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-md-offset-4">
+                    <h1 class="text-center login-title">Panel de Administracion</h1>
+                    <div class="account-wall">
+
+                        <form class="form-signin" ng-submit="autenticar()">
+                            <input type="text" class="form-control" placeholder="Usuario" ng-model="usuario.nombre" required autofocus>
+                            <input type="password" class="form-control" placeholder="Contraseña" ng-model="usuario.pass"  required>
+                            <div ng-show="error">
+                                <div class="alert">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Error </strong> El usuario y/o contraseña son invalidos.
+                                </div>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                Loguearse</button>
+
+                            </label>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </script>
+
+    <script type="text/ng-template" id="instituciones1.html">
+
+    <link rel="stylesheet" href="/stylesheets/estilo_gral.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/desplegable.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/stylesheets/hover.css" type="text/css" media="screen" />
+
+    <div id="wrapper">
+        <header>
+            <div id="logo"><a href="index.html"><img src="images/logo.png" alt="ReCursos" width="205" height="61" title="ReCursos"/></a></div>
+            <div id="navegador">
+                <ul id="nave">
+                    <li><a href="A" s>CURSOS</a> &nbsp; | &nbsp;
+                        <ul class="submenu">
+                            <li><a href="#">Administraci&oacute;n</a></li>
+                            <li><a href="#">M&uacute;sica</a></li>
+                            <li><a href="#">Ceremonial</a></li>
+                            <li><a href="#">Computaci&oacute;n</a></li>
+                            <li><a href="#">Comercio</a></li>
+                            <li><a href="#">Comunicaci&oacute;n</a></li>
+                            <li><a href="#">Gastronom&iacute;a</a></li>
+                            <li><a href="#">Legales</a></li>
+                            <li><a href="#">Idiomas</a></li>
+                            <li><a href="#">Arte</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#/instituciones">INSTITUCIONES ACAD&Eacute;MICAS</a>&nbsp; | &nbsp;</li>
+                    <li><a href="#" >+MAS</a>&nbsp; | &nbsp;</li>
+                    <li><a href="contacto.html" title="contacto">CONTACTANOS</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div id="slider"><img src="images/instituciones.jpg" width="100%"  alt="instituciones"/>  </div>
+
+    </div>
+    <div id="wrapper">
+
+
+
+    <section>
+        <div id="info">
+            <div id="info-vacio"></div>
+
+
+
+
+        </div>
+        <div id="curso">
+            <p>
+                <h8>Instituciones acad&eacute;micas     </h8>
+                <h7> Universidades</h7>
+            </p>
+            <div id="linea"></div>
+        </div>
+
+    </section>
+    <section>
+        <div id="info">
+            <div id="info-valor">
+                <p>Universidades / Terciarios</p>
+            </div>
+
+            <div id="info-curso">
+                <p>Empresas      </p>
+            </div>
+            <div id="info-curso">
+                <p>Consultoras</p>
+            </div>
+
+            <div id="info-curso">
+                <p>Escuela de Negocios      </p>
+            </div>
+            <div id="info-curso">
+                <p>Profesionales</p>
+            </div>
+        </div>
+        <div id="universidades">
+
+            <div ng-repeat="institucion in instituciones  | orderBy:'_id' ">
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles"><a href="#" target="_blank">{{institucion.nombre}}</a></p>
+                    <p>{{institucion.calle}}, {{institucion.numero}} {{institucion.departamento}}  |  <a href="#" title="{{institucion.web}}" target="_blank">{{institucion.web}}</a> |  {{institucion.telefono}}</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles"><a href="#" target="_blank">{{mensaje}}
+                        </a></p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles"><a href="#" target="_blank">Universidad del Aconcagua
+                        </a></p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles">Universidad Juan Agustin Maza        </p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles">Universidad Champagnat        </p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles">Universidad de Congreso        </p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles">Universidad Cat&oacute;lica        </p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles">Universidad de Mendoza        </p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles">Fundaci&oacute;n Universitas        </p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="universidades-modulo">
+                <div id="universidades-info">
+                    <p class="univ-titles">Fundaci&oacute;n Universitas, Esc. de Educaci&oacute;n Superior        </p>
+                    <p>Centro Universitario Parque General San Mart&iacute;n, 5500 Mendoza  |  <a href="#" title="uncu.edu.ar" target="_blank">uncu.edu.ar</a> |  0261 413-5003</p>
+
+                </div>
+                <div id="universidades-redes">
+                    <ul>
+                        <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+                        <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+
+    <div id="linea"></div>
+
+
+    <footer>
+        <div id="footer-logos">
+            <ul>
+                <li><a href="#"><img src="images/logo-capitalizar.png" width="187" height="44" alt="capitalizarh
+"/></a></li>
+                <li><a href="index.html"><img src="images/logo.png" height="44" alt="recursos
+"/></a></li>
+            </ul>
+        </div>
+        <div id="footer-nav">COPYRIGHT &copy; 2014 CAPITALIZARH  |  <a href="mailto:hola@capitalizarh.com" title="hola@capitalizarh.com" target="_blank">HOLA@CAPITALIZARH.COM</a></div>
+    </footer>
+
+    </div>
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        function mainmenu(){
+            $(" #nave ul ").css({display: "none"});
+            $(" #nave li").hover(function(){
+                $(this).find('ul:first:hidden').css({visibility: "visible",display: "none"}).slideDown(400);
+            },function(){
+                $(this).find('ul:first').slideUp(400);
+            });
+        }
+        $(document).ready(function(){
+            mainmenu();
+        });
+    </script>
+
+    <script type='text/javascript'>
+        (function() {
+            // code goes here...
+            (function () {
+                var ua = navigator.userAgent,
+                        isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+
+                if (isMobileWebkit) {
+                    $('html').addClass('mobile');
+                }
+
+                $(function () {
+                    var iScrollInstance;
+
+                    if (isMobileWebkit) {
+                        iScrollInstance = new iScroll('wrapper');
+
+                        $('#scroller').stellar({
+                            scrollProperty: 'transform',
+                            positionProperty: 'transform',
+                            horizontalScrolling: false,
+                            verticalOffset: 150
+                        });
+                    } else {
+                        $.stellar({
+                            horizontalScrolling: false,
+                            verticalOffset: 150
+                        });
+                    }
+                });
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>

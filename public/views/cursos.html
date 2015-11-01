@@ -1,0 +1,116 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<!--IPHONE META TAG FOR VIEWPORT, MAINTAINING SCALE ON ORIENTATION CHANGE-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<!-- Si quieres que Google utilice la información de tu página HTML-->
+<meta name="robots" content="NOODP"/>
+
+
+<title>CAPITALIZARH</title>
+
+<meta content="Nombre del Autor" name="author" />
+<meta content="Descripcion de la pagina" name="description" />
+<meta content="etiqueta1, etiqueta2, etiqueta3" name="keywords" />
+
+<!--FAVICON -->
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+
+<!-- Script para ahorrarse los vendor prefix en CSS-->
+<script src="prefixfree.min.js"></script>
+
+<!-- End WOWSlider.com HEAD section -->
+<!--estilos para SELECT
+<script type="text/javascript" src="jquery.customSelect.js"></script>
+<script type="text/javascript">
+$(function(){
+$('select.styled').customSelect();
+});
+</script>-->
+
+<div id="slider"><img src="images/instituciones.jpg" width="100%"  alt="instituciones"/>  </div>
+
+
+<div id="wrapper">
+
+  <section>
+    <div id="info">
+      <div id="info-vacio"></div>
+    </div>
+    <div id="curso">
+      <p>
+        <h8>Cursos     </h8>
+        <h7 ng-if="!tipoActual">Todos</h7>
+        <h7> {{tipoActual}}</h7>
+      </p>
+      <div id="linea"></div>
+    </div>
+  </section>
+
+  <section  >
+    <div id="info" ng-if="tipoActual != 'Carreras de Grado' && tipoActual != 'Postgrados - Maestrias' && tipoActual != 'Online - E-learning' && tipoActual != ''">
+      <div id="info-curso" ng-repeat="tipo in tipos.data" ng-if="$index < 24">
+        <a href="#/cursos/{{tipo.nombre}}"><p>{{tipo.nombre}}</p></a>
+      </div>
+    </div>
+
+    <div id="info" ng-if="tipoActual == 'Online - E-learning'">
+      <div id="info-curso">
+        <a href="#/cursos/Online - E-learning"><p>Online - E-learning</p></a>
+      </div>
+    </div>
+
+    <div id="info" ng-if="tipoActual == 'Carreras de Grado'">
+      <div id="info-curso" ng-repeat="tipoGrados in tiposGrados.data">
+        <a href="#/cursos/{{tipoGrados.nombre}}"><p>{{tipoGrados.nombre}}</p></a>
+      </div>
+    </div>
+
+    <div id="info" ng-if="tipoActual == 'Postgrados - Maestrias'">
+      <div id="info-curso" ng-repeat="tipoMaestrias in tiposMaestrias.data">
+        <a href="#/cursos/{{tipoMaestrias.nombre}}"><p>{{tipoMaestrias.nombre}}</p></a>
+      </div>
+    </div>
+
+    <div id="info" ng-if="tipoActual == ''">
+      <div id="info-curso">
+        <a href="#/cursos/Todos"><p>Todos</p></a>
+      </div>
+    </div>
+
+    <div id="universidades">
+
+      <div id="universidades-modulo"  ng-if="!subtipoActual " ng-repeat="post in posts | filter: { tipo : tipoActual} ">
+
+        <div id="universidades-info">
+          <p class="univ-titles"><a href="#/curso/{{post._id}}" target="_blank">{{post.titulo}}</a></p>
+          <p>{{post.calle}} al {{post.numero}}, {{post.departamento}}  |  {{post.inicio | date:'dd/MM/yyyy' : 'UTC'}} |  {{post.tipo}}</p>
+        </div>
+      </div>
+
+        <div id="universidades-modulo"  ng-if="subtipoActual" ng-repeat="post in posts | filter: { subtipo : subtipoActual} ">
+
+          <div id="universidades-info">
+            <p class="univ-titles"><a href="#/curso/{{post._id}}" target="_blank">{{post.titulo}}</a></p>
+            <p>{{post.calle}} al {{post.numero}}, {{post.departamento}}  |  {{post.inicio | date:'dd/MM/yyyy' : 'UTC'}} |  {{post.subtipo}}</p>
+          </div>
+        </div>
+
+
+
+      </section>
+
+      <div id="linea"></div>
+
+
+      <footer>
+        <div id="footer-logos">
+          <ul>
+            <li><a href="#/home"><img src="images/logo.png" height="44" alt="capitalizaRH" title="capitalizaRH"></a></li>
+          </ul>
+        </div>
+        <div id="footer-nav">COPYRIGHT &copy; 2014 CAPITALIZARH  |  <a href="mailto:CONECTARME@capitalizarh.com" title="CONECTARME@capitalizarh.com" target="_blank">CONECTARME@CAPITALIZARH.COM</a></div>
+      </footer>
+
+    </div>

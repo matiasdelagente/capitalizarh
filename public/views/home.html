@@ -1,0 +1,870 @@
+
+<link rel="stylesheet" href="stylesheets/slider-bootstrap.css" type="text/css" />
+
+<title>CAPITALIZARH</title>
+
+<meta content="Nombre del Autor" name="author" />
+<meta content="Descripcion de la pagina" name="description" />
+<meta content="etiqueta1, etiqueta2, etiqueta3" name="keywords" />
+
+<div id="slider">
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <a href="#/curso/{{posts[0]._id}}"><img ng-src="{{posts[0].foto}}" alt="..."></a>
+        <div class="carousel-caption">
+          <h1>{{user.twits[0]}}</h1>
+          <h2>{{posts[0].institucion.nombre}}</h2>
+          <h3>{{posts[0].inicio | date:"dd/MM/yyyy"}}</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="#/curso/{{posts[1]._id}}"><img ng-src="{{posts[1].foto}}" alt="..."></a>
+        <div class="carousel-caption">
+          <h1>{{posts[1].titulo}}</h1>
+          <h2>{{posts[1].institucion.nombre}}</h2>
+          <h3>{{posts[1].inicio | date:"dd/MM/yyyy"}}</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="#/curso/{{posts[2]._id}}"><img ng-src="{{posts[2].foto}}" alt="..."></a>
+        <div class="carousel-caption">
+          <h1>{{posts[2].titulo}}</h1>
+          <h2>{{posts[2].institucion.nombre}}</h2>
+          <h3>{{posts[2].inicio | date:"dd/MM/yyyy"}}</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="#/curso/{{posts[3]._id}}"><img ng-src="{{posts[3].foto}}" alt="..."></a>
+        <div class="carousel-caption">
+          <h1>{{posts[3].titulo}}</h1>
+          <h2>{{posts[3].institucion.nombre}}</h2>
+          <h3>{{posts[3].inicio | date:"dd/MM/yyyy"}}</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="#/curso/{{posts[4]._id}}"><img ng-src="{{posts[4].foto}}" alt="..."></a>
+        <div class="carousel-caption">
+          <h1>{{posts[4].titulo}}</h1>
+          <h2>{{posts[4].institucion.nombre}}</h2>
+          <h3>{{posts[4].inicio | date:"dd/MM/yyyy"}}</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="wrapper">
+  <div id="sub-botonera">
+    <ul>
+        <li class="spot"><a href="#">Qu&eacute; quer&eacute;s estudiar?</a></li>
+      <li ng-repeat="tipo in tipos.data"><a href="#/cursos/{{tipo.nombre}}">{{tipo.nombre}}</a></li>
+    </ul>
+  </div>
+  <div id="linea"></div>
+  <div id="buscador"><form><input type="text" id="buscar" width="80%" placeholder="Buscar" ng-model="busqueda"></form>
+    <div id="lupa"><a href="#/buscar/{{busqueda}}"><img src="images/lupa.png" width="27" height="27" alt="Buscar"/></a></div></div>
+    <div id="evento">
+      <div id="fijo">
+        <div id="modulo-eventos">
+          <h6> PR&Oacute;XIMOS CURSOS</h6>
+          <p>&nbsp;</p>
+          <div id="modulo-eventos-individual">
+            <p><a href="#/curso/{{posts[21]._id}}">{{posts[21].titulo}}</a></p>
+            <p> {{posts[21].inicio | date:"dd/MM/yyyy"}}</p>
+          </div>
+          <div id="modulo-eventos-individual">
+            <p> <a href="#/curso/{{posts[22]._id}}">{{posts[22].titulo}}</a></p>
+            <p> {{posts[22].inicio | date:"dd/MM/yyyy"}}</p>
+            </div>
+
+            <div id="modulo-eventos-individual">
+              <p> <a href="#/curso/{{posts[23]._id}}">{{posts[23].titulo}}</a></p>
+              <p> {{posts[23].inicio | date:"dd/MM/yyyy"}}</p>
+              </div>
+
+
+              </div>
+            </div>
+          </div>
+
+
+          <section>
+
+            <!--PRIMERA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-1" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[5]._id}}"><img ng-src="{{posts[5].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[5].titulo}}</h4>
+                        <h5>{{posts[5].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[13]._id}}"><img ng-src="{{posts[13].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[13].titulo}}</h4>
+                        <h5>{{posts[13].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-1" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-1" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--SEGUNDA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[6]._id}}"><img ng-src="{{posts[6].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[6].titulo}}</h4>
+                        <h5>{{posts[6].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[14]._id}}"><img ng-src="{{posts[14].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[14].titulo}}</h4>
+                        <h5>{{posts[14].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="modulo"><img src="images/falso.png" width="100%" height="auto" alt=""/> </div>
+
+
+            <!--TERCERA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-3" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[7]._id}}"><img ng-src="{{posts[7].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[7].titulo}}</h4>
+                        <h5>{{posts[7].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[15]._id}}"><img ng-src="{{posts[15].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[15].titulo}}</h4>
+                        <h5>{{posts[15].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <a class="left carousel-control" href="#carousel-example-generic-3" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-3" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--CUARTA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-4" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[8]._id}}"><img ng-src="{{posts[8].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[8].titulo}}</h4>
+                        <h5>{{posts[8].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[16]._id}}"><img ng-src="{{posts[16].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[16].titulo}}</h4>
+                        <h5>{{posts[16].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-4" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-4" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--QUINTA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-5" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[9]._id}}"><img ng-src="{{posts[9].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[9].titulo}}</h4>
+                        <h5>{{posts[9].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <div class="item ">
+                      <div id="modulo-img"><a href="#/curso/{{posts[17]._id}}"><img ng-src="{{posts[17].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[17].titulo}}</h4>
+                        <h5>{{posts[17].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-5" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-5" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--SEXTA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-6" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[10]._id}}"><img ng-src="{{posts[10].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[10].titulo}}</h4>
+                        <h5>{{posts[10].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[18]._id}}"><img ng-src="{{posts[18].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[18].titulo}}</h4>
+                        <h5>{{posts[18].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <a class="left carousel-control" href="#carousel-example-generic-6" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-6" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--SEPTIMA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-7" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[11]._id}}"><img ng-src="{{posts[11].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[11].titulo}}</h4>
+                        <h5>{{posts[11].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[19]._id}}"><img ng-src="{{posts[19].foto}}" alt="photoshop" width="376" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[19].titulo}}</h4>
+                        <h5>{{posts[19].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-7" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-7" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--OCTAVA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-8" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[12]._id}}"><img ng-src="{{posts[12].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[12].titulo}}</h4>
+                        <h5>{{posts[12].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[20]._id}}"><img ng-src="{{posts[20].foto}}" alt="photoshop" width="376" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[20].titulo}}</h4>
+                        <h5>{{posts[20].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-8" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-8" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <div id="linea"></div>
+
+          <div id="newsletter">
+            <h6> Suscribite a nuestro newsletter </h6>
+            <p>Mantenete informado de las novedades y cursos de CapitalizaRH </p>
+            <p>&nbsp;</p>
+            <form method="post" id="suscripcion">
+              <select name="intereses" class="selectstyle" id="intereses" placeholder="Que te interesa?" >
+                <option ng-repeat="tipo in tipos.data" value="{{$index+1}}">{{tipo.nombre}}</option>
+
+              </select>
+              <input type="email" id="correo" placeholder="nombre@tumail.com" class="blanco">
+              <input type="button" id="enviar">
+            </form>
+
+          </div>
+
+          <div id="publicidad"><img ng-src="{{banners[0].imagen}}"/></div>
+
+          <section>
+
+            <!--DECIMA TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-10" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[24]._id}}"><img ng-src="{{posts[24].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[24].titulo}}</h4>
+                        <h5>{{posts[24].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[30]._id}}"><img ng-src="{{posts[30].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[30].titulo}}</h4>
+                        <h5>{{posts[30].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[36]._id}}"><img ng-src="{{posts[36].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[36].titulo}}</h4>
+                        <h5>{{posts[36].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-10" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-10" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--DECIMA1 TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-11" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[25]._id}}"><img ng-src="{{posts[25].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[25].titulo}}</h4>
+                        <h5>{{posts[25].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[31]._id}}"><img ng-src="{{posts[31].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[31].titulo}}</h4>
+                        <h5>{{posts[31].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[37]._id}}"><img ng-src="{{posts[37].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[37].titulo}}</h4>
+                        <h5>{{posts[37].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+
+                    <a class="left carousel-control" href="#carousel-example-generic-11" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-11" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--DECIMA2 TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-12" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[26]._id}}"><img ng-src="{{posts[26].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[26].titulo}}</h4>
+                        <h5>{{posts[26].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[32]._id}}"><img ng-src="{{posts[32].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[32].titulo}}</h4>
+                        <h5>{{posts[32].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[38]._id}}"><img ng-src="{{posts[38].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[38].titulo}}</h4>
+                        <h5>{{posts[38].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-12" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-12" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--DECIMA3 TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-13" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[27]._id}}"><img ng-src="{{posts[27].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[27].titulo}}</h4>
+                        <h5>{{posts[27].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[33]._id}}"><img ng-src="{{posts[33].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[33].titulo}}</h4>
+                        <h5>{{posts[33].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[39]._id}}"><img ng-src="{{posts[39].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[39].titulo}}</h4>
+                        <h5>{{posts[39].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <a class="left carousel-control" href="#carousel-example-generic-13" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-13" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--DECIMA4 TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-14" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[28]._id}}"><img ng-src="{{posts[28].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[28].titulo}}</h4>
+                        <h5>{{posts[28].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[34]._id}}"><img ng-src="{{posts[34].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[34].titulo}}</h4>
+                        <h5>{{posts[34].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[40]._id}}"><img ng-src="{{posts[40].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[40].titulo}}</h4>
+                        <h5>{{posts[40].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-14" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-14" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-15" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[29]._id}}"><img ng-src="{{posts[29].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[29].titulo}}</h4>
+                        <h5>{{posts[29].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[35]._id}}"><img ng-src="{{posts[35].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[35].titulo}}</h4>
+                        <h5>{{posts[35].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[41]._id}}"><img ng-src="{{posts[41].foto}}" alt="photoshop" width="375" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[41].titulo}}</h4>
+                        <h5>{{posts[41].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-15" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-15" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+
+          <div id="twitter"> <img src="images/twitter.png" width="100%" alt=""/></div>
+
+
+          <section>
+            <!--DECIMA5 TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-16" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[42]._id}}"><img ng-src="{{posts[42].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[42].titulo}}</h4>
+                        <h5>{{posts[42].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[45]._id}}"><img ng-src="{{posts[45].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[45].titulo}}</h4>
+                        <h5>{{posts[45].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[48]._id}}"><img ng-src="{{posts[48].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[48].titulo}}</h4>
+                        <h5>{{posts[48].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-16" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-16" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--DECIMA6 TANDA-->
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-17" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[43]._id}}"><img ng-src="{{posts[43].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[43].titulo}}</h4>
+                        <h5>{{posts[43].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[46]._id}}"><img ng-src="{{posts[46].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[46].titulo}}</h4>
+                        <h5>{{posts[46].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[49]._id}}"><img ng-src="{{posts[49].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[49].titulo}}</h4>
+                        <h5>{{posts[49].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-17" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-17" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!--DECIMA7 TANDA-->
+
+            <div id="modulo">
+              <div>
+                <div id="carousel-example-generic-17" class="carousel slide" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                      <div id="modulo-img"><a href="#/curso/{{posts[44]._id}}"><img ng-src="{{posts[44].foto}}" alt="photoshop" width="376" height="319" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[44].titulo}}</h4>
+                        <h5>{{posts[44].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[47]._id}}"><img ng-src="{{posts[47].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[47].titulo}}</h4>
+                        <h5>{{posts[47].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div id="modulo-img"><a href="#/curso/{{posts[50]._id}}"><img ng-src="{{posts[50].foto}}" alt="photoshop" width="372" height="318" class="brightness"/></a></div>
+                      <div class="carousel-caption2">
+                        <h4>{{posts[50].titulo}}</h4>
+                        <h5>{{posts[50].inicio | date:"dd/MM/yyyy"}}</h5>
+                      </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-example-generic-17" role="button" data-slide="prev">
+                      <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-17" role="button" data-slide="next">
+                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <div id="cursos">
+            <div id="cursos-int"><a href="#/cursos/Todos">Ver todos los cursos</a></div>
+          </div>
+
+          <div id="sociales">
+            <div id="sociales-int"><img src="images/somos-sociales-fb.png" alt="redes sociales" width="744" height="46" usemap="#Map"/>
+              <map name="Map">
+                <area shape="rect" coords="390,1,435,45" href="https://www.facebook.com/pages/Capitalizarh/288484964583807?fref=ts" target="_blank" alt="Facebook">
+                <area shape="rect" coords="448,1,493,45" href="https://twitter.com/Capitalizarh" target="_blank" alt="twitter">
+                <area shape="rect" coords="506,1,551,45" href="https://www.linkedin.com/pub/capitalizarh-com-ar/30/2bb/7b6" target="_blank" alt="linked in">
+              </map>
+            </div>
+          </div>
+          <div id="linea"></div>
+
+
+          <footer>
+            <div id="footer-logos">
+              <ul>
+                <li><a href="#/home"><img src="images/logo.png" height="44" alt="capitalizaRH" title="capitalizaRH"></a></li>
+              </ul>
+            </div>
+            <div id="footer-nav">COPYRIGHT &copy; 2014 CAPITALIZARH  |  <a href="mailto:CONECTARME@capitalizarh.com" title="CONECTARME@capitalizarh.com" target="_blank">CONECTARME@CAPITALIZARH.COM</a></div>
+          </footer>
+
+        </div>

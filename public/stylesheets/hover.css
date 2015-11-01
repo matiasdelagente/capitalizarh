@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* EFECTOS */
+img {
+			-webkit-transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			-ms-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			 border:0;
+
+		}
+
+/*img a:hover{
+			filter: brightness(0.9);
+			-webkit-filter: brightness(0.9);
+			-moz-filter: brightness(0.9);
+			-o-filter: brightness(0.9);
+			-ms-filter: brightness(0.9);
+} */
+
+		.blur {
+			filter: blur(10px);
+			-webkit-filter: blur(10px);
+			-moz-filter: blur(10px);
+			-o-filter: blur(10px);
+			-ms-filter: blur(10px);
+		}
+		img.blur:hover {
+			filter: blur(0);
+			-webkit-filter: blur(0);
+			-moz-filter: blur(0);
+			-o-filter: blur(0);
+			-ms-filter: blur(0);
+		}
+		/*
+		.brightness {
+			filter: brightness(1);
+			-webkit-filter: brightness(1);
+			-moz-filter: brightness(1);
+			-o-filter: brightness(1);
+			-ms-filter: brightness(1);
+		}
+		img.brightness:hover{
+			filter: brightness(0.5);
+			-webkit-filter: brightness(0.5);
+			-moz-filter: brightness(0.5);
+			-o-filter: brightness(0.5);
+			-ms-filter: brightness(0.5);
+		}
+		*/
+		.saturation {
+			filter: saturate(400%);
+			-webkit-filter: saturate(400%);
+			-moz-filter: saturate(400%);
+			-o-filter: saturate(400%);
+			-ms-filter: saturate(400%);
+		}
+		img.saturation:hover{
+			filter: saturate(100%);
+			-webkit-filter: saturate(100%);
+			-moz-filter: saturate(100%);
+			-o-filter: saturate(100%);
+			-ms-filter: saturate(100%);
+		}
+
+		.contrast{
+			filter: contrast(300%);
+			-webkit-filter: contrast(300%);
+			-moz-filter: contrast(300%);
+			-o-filter: contrast(300%);
+			-ms-filter: contrast(300%);
+		}
+
+		img.contrast:hover{
+			filter: contrast(100%);
+			-webkit-filter: contrast(100%);
+			-moz-filter: contrast(100%);
+			-o-filter: contrast(100%);
+			-ms-filter: contrast(100%);
+		}
+
+		.invert {
+			filter: invert(0%);
+			-webkit-filter: invert(0%);
+			-moz-filter: invert(0%);
+			-o-filter: invert(0%);
+			-ms-filter: invert(0%);
+		}
+
+		img.invert:hover {
+			filter: invert(100%);
+			-webkit-filter: invert(100%);
+			-moz-filter: invert(100%);
+			-o-filter: invert(100%);
+			-ms-filter: invert(100%);
+		}
+
+		.grayscale {
+			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+		}
+
+		img.grayscale:hover {
+			filter: grayscale(0);
+			-webkit-filter: grayscale(0);
+			-moz-filter: grayscale(0);
+			-o-filter: grayscale(0);
+			-ms-filter: grayscale(0);
+		}
+
+		.sepia {
+			filter: sepia(100%);
+			-webkit-filter: sepia(100%);
+			-moz-filter: sepia(100%);
+			-o-filter: sepia(100%);
+			-ms-filter: sepia(100%);
+		}
+		img.sepia:hover {
+			filter: sepia(0);
+			-webkit-filter: sepia(0);
+			-moz-filter: sepia(0);
+			-o-filter: sepia(0);
+			-ms-filter: sepia(0);
+		}

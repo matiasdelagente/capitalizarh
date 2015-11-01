@@ -1,0 +1,121 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<!--IPHONE META TAG FOR VIEWPORT, MAINTAINING SCALE ON ORIENTATION CHANGE-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<!-- Si quieres que Google utilice la información de tu página HTML-->
+<meta name="robots" content="NOODP"/>
+
+
+<title>CAPITALIZARH</title>
+
+<meta content="Nombre del Autor" name="author" />
+<meta content="Descripcion de la pagina" name="description" />
+<meta content="etiqueta1, etiqueta2, etiqueta3" name="keywords" />
+
+<!--STYLES CSS -->
+
+
+
+<!--FAVICON -->
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+<!-- GOOGLE-FONTS -->
+
+
+<!--JAVA BASE -->
+
+<!-- Script para ahorrarse los vendor prefix en CSS-->
+   <script src="prefixfree.min.js"></script>
+
+  <!-- End WOWSlider.com HEAD section -->
+<!--estilos para SELECT
+<script type="text/javascript" src="jquery.customSelect.js"></script>
+<script type="text/javascript">
+$(function(){
+$('select.styled').customSelect();
+});
+</script>-->
+
+
+
+<div id="slider"><img src="images/salas.jpg" width="100%"  alt="instituciones"/>  </div>
+
+</div>
+<div id="wrapper">
+
+
+
+<section>
+  <div id="info">
+  <div id="info-vacio"></div>
+
+
+
+
+  </div>
+  <div id="curso">
+     <p>
+       <h8>Mas servicios       </h8>
+       <h7> Salas</h7>
+     </p>
+<div id="linea"></div>
+  </div>
+
+  </section>
+  <section>
+  <div id="info">
+
+  <div id="info-curso"  ng-repeat="tipoServicio in tiposServicios.data">
+    <a href="#/servicios/{{tipoServicio.nombre}}"><p>{{tipoServicio.nombre}}</p></a>
+  </div>
+
+
+    </div>
+  <div id="universidades">
+
+
+<div id="universidades-modulo" ng-repeat="servicio in servicios | filter: { tipo : tipoActual}">
+  <div id="universidades-info">
+    <img ng-src="{{servicio.logo}}"  width="40" height="30" alt=""/>
+    <p class="univ-titles">{{servicio.nombre}}</p>
+    <p>{{servicio.calle}} al {{servicio.numero}} , {{servicio.ciudad}}  |  {{servicio.telefono}}  |  <a href="{{servicio.correo}}" title="{{servicio.correo}}" target="_blank">{{servicio.correo}} </a></p>
+  </div>
+  <div id="universidades-redes">
+    <ul>
+      <li><a href="http://{{servicio.facebook}}"><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></a></li>
+      <li><a href="http://{{servicio.twiter}}"><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></a></li>
+    </ul>
+  </div>
+</div>
+
+    <div id="universidades-modulo">
+      <div id="universidades-info">
+        <p class="univ-titles"><a href="#" target="_blank">Tierras del Plata
+        </a></p>
+        <p>Agripino Rodriguez  |  4-963895 / 156-629726  |  <a href="mailto:info@tierrasdelplata.com.ar" title="info@tierrasdelplata.com.ar" target="_blank">info@tierrasdelplata.com.ar </a></p>
+
+      </div>
+      <div id="universidades-redes">
+        <ul>
+          <li><img src="images/fb-instituciones.png" width="29" height="29" alt=""/></li>
+          <li><img src="images/tw-instituciones.png" width="30" height="29" alt=""/></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <div id="linea"></div>
+
+<footer>
+  <div id="footer-logos">
+    <ul>
+        <li><a href="#/home"><img src="images/logo.png" height="44" alt="capitalizaRH" title="capitalizaRH"></a></li>
+    </ul>
+  </div>
+  <div id="footer-nav">COPYRIGHT &copy; 2014 CAPITALIZARH  |  <a href="mailto:CONECTARME@capitalizarh.com" title="CONECTARME@capitalizarh.com" target="_blank">CONECTARME@CAPITALIZARH.COM</a></div>
+</footer>
+
+</div>
